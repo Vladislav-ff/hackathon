@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Хакатон МГУ</title>
+	<style type="text/css">
+		html {
+			-webkit-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+		}
+	</style>
+	<style em="styles">
+@media only screen and (max-device-width:660px),only screen and (max-width:660px) {
+    .em-narrow-table {
+        width: 100%!important;
+        max-width: 660px!important;
+        min-width: 320px!important;
+    }
+    .em-mob-padding_top-0 {
+        padding-top: 0!important;
+    }
+    .em-mob-padding_right-0 {
+        padding-right: 0!important;
+    }
+    .em-mob-padding_bottom-0 {
+        padding-bottom: 0!important;
+    }
+    .em-mob-padding_left-0 {
+        padding-left: 0!important;
+    }
+    .em-mob-wrap.em-mob-wrap-cancel,.noresp-em-mob-wrap.em-mob-wrap-cancel {
+        display: table-cell!important;
+    }
+    .em-mob-font_size-30px {
+        font-size: 30px!important;
+    }
+    .em-mob-line_height-35px {
+        line-height: 35px!important;
+    }
+    .em-mob-padding_top-30 {
+        padding-top: 30px!important;
+    }
+    .em-mob-padding_bottom-30 {
+        padding-bottom: 30px!important;
+    }
+    .em-mob-width-90perc {
+        width: 90%!important;
+        max-width: 90%!important;
+        min-width: 90%!important;
+    }
+    .em-mob-width-60perc {
+        width: 60%!important;
+        max-width: 60%!important;
+        min-width: 60%!important;
+    }
+    .em-mob-height-20px {
+        height: 20px!important;
+    }
+    .em-mob-width-80perc {
+        width: 80%!important;
+        max-width: 80%!important;
+        min-width: 80%!important;
+    }
+    .em-mob-text_align-right {
+        text-align: right!important;
+    }
+    .em-mob-height-10px {
+        height: 10px!important;
+    }
+    .em-mob-width-auto {
+        width: auto!important;
+    }
+    .em-mob-width-100perc {
+        min-width: 100%!important;
+    }
+    .em-mob-padding_bottom-20 {
+        padding-bottom: 20px!important;
+    }
+    .em-mob-text_align-center {
+        text-align: center!important;
+    }
+    .em-mob-width-100perc {
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+    .em-mob-wrap {
+        display: block!important;
+    }
+    .em-mob-padding_right-20 {
+        padding-right: 20px!important;
+    }
+    .em-mob-padding_left-20 {
+        padding-left: 20px!important;
+    }
+}
+</style>
+</head>
+<body style="margin: 0; padding: 0;">
+	<span class="preheader" style="display: none !important; visibility: hidden; opacity: 0; color: #F8F8F8; height: 0; width: 0; font-size: 1px;">&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</span>
+	<!--[if !mso]><!-->
+	<div style="font-size:0px;color:transparent;opacity:0;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</div>
+	<!--<![endif]-->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-size: 1px; line-height: 21px;">
+		<tr em="group">
+			<td align="center" bgcolor="#F8F8F8" style="padding-top: 40px; padding-bottom: 40px;" class="em-mob-padding_top-0 em-mob-padding_right-0 em-mob-padding_bottom-0 em-mob-padding_left-0">
+				<!--[if (gte mso 9)|(IE)]>
+				<table cellpadding="0" cellspacing="0" border="0" width="660"><tr><td>
+				<![endif]-->
+				<table cellpadding="0" cellspacing="0" width="100%" border="0" style="max-width: 660px; min-width: 660px; width: 660px;" class="em-narrow-table"><tr em="block" class="em-structure">
+						<td align="center" style="padding: 15px 40px 43px; background-repeat: no-repeat; background-size: 100%;" class="em-mob-padding_top-30 em-mob-padding_right-20 em-mob-padding_bottom-30 em-mob-padding_left-20" background="https://emcdn.ru/394513/240330_5738_E5W8IZ5.png">
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="340" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td>
+													<img src="https://emcdn.ru/403806/240404_5850_fuKRTXJ.png" width="50" border="0" alt="" style="display: block; width: 100%; max-width: 50px;">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td width="20" class="em-mob-wrap em-mob-wrap-cancel"></td>
+									<td width="100" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom" class="null">
+											<tr>
+												<td>
+													<a style="font-family: Helvetica, Roboto, Arial, sans-serif; line-height: 21px; color: #000000; font-size: 14px;" align="right" href="https://vk.com/viribusunitismsu">О ХАКАТОНЕ</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td width="20" class="em-mob-wrap em-mob-wrap-cancel"></td>
+									<td width="100" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td>
+													<a style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 21px; color: #000000;" align="right" href="https://vk.com/viribusunitismsu">КОНТАКТЫ&nbsp;</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom" class="null"><tr><td height="30" class="null"></td></tr></table>
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="580" valign="top" class="em-mob-wrap em-mob-width-100perc" align="center">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-right: 0px; padding-bottom: 10px; padding-left: 0px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 40px; line-height: 50px; color: #000000;" class="em-mob-font_size-30px em-mob-line_height-35px" align="center">ХАКАТОН МГУ&nbsp;</div>
+												</td>
+											</tr>
+										</table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-right: 0px; padding-left: 0px;" align="center">
+													<table cellpadding="0" cellspacing="0" border="0" style="width: 130px;" width="130">
+														<tr>
+															<td align="center" valign="middle" height="41" style="border-radius: 100px; height: 41px; border-width: 1px; border-style: solid; border-color: #000000;">
+																<a style="display: block; height: 41px; font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 41px; text-decoration: none; white-space: nowrap; color: #000000;" target="_blank" href="https://forms.yandex.ru/cloud/65f69d022530c2032541476f/?clckid=vk_viribus">РЕГИСТРАЦИЯ&nbsp;</a>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 8px 0px 10px;">
+  <div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 35px; line-height: 32px; color: #333333;" align="center">20-21 апреля</div>
+</td></tr></table>
+
+
+										
+										
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="84"></td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="60%" em="atom" class="em-mob-width-90perc">
+											<tr>
+												<td>
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #000000;" align="center">РАЗРАБОТАЙ И ЗАПУСТИ СВОЙ ПЕРВЫЙ СЕРВИС</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr><tr em="block" class="em-structure">
+  <td align="center" style="padding: 30px 40px; background-color: #1f1f1f; background-repeat: repeat;" class="em-mob-padding_left-20 em-mob-padding_right-20" bgcolor="#1F1F1F">
+    <table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+      <tr>
+        <td width="280" valign="top" class="em-mob-wrap em-mob-width-100perc">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 20px 0 10px;">
+  <div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 22px; line-height: 35px; color: #e239f3;"><strong>УЧАСТНИКИ</strong></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding-bottom: 10px;">
+  <div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 21px; color: #f5f5f5;">Команды обучающихся московских вузов от 3 до 6 человек<br>Для неполных команд есть возможность найти сокомандников в чате<br></div>
+</td></tr></table>
+
+</td>
+        <td width="20" class="em-mob-wrap"></td>
+        <td width="280" valign="top" class="em-mob-wrap em-mob-width-100perc">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 20px 0 10px;">
+  <div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 22px; line-height: 35px; color: #00ece1;"><strong>ФОРМАТ</strong></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom" class="null"><tr><td style="padding-bottom: 10px;">
+  <div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 21px; color: #5a5a5a;"><span style="color: #f5f5f5;">За 2 дня командам предстоит создать цифровой сервис для мобильного приложения</span> <a href="https://app.profcomff.com/timetable/init" target="_blank" style="text-decoration: underline; color: #e239f3;">Твой ФФ</a></div>
+</td></tr></table>
+
+</td>
+      </tr>
+    </table>
+  </td>
+</tr><tr em="block" class="em-structure">
+						<td align="center" style="padding: 40px; background-repeat: repeat; background-size: cover;" class="em-mob-padding_left-20 em-mob-padding_right-20" background="https://emcdn.ru/278815/240305_4213_KLZ8Wzf.png">
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="280" valign="middle" class="em-mob-wrap em-mob-width-100perc">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-right: 0px; padding-bottom: 10px; padding-left: 0px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 30px; line-height: 35px;"><strong>От <span style="color: #1f1f1f;">кода</span><br>до <span style="color: #1f1f1f;">прода</span>&nbsp;</strong></div>
+												</td>
+											</tr>
+										</table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 18px; color: #1f1f1f;">Участники получат опыт командной разработки open-source проекта, научатся использовать цифровые инструменты<br>и многое другое</div>
+												</td>
+											</tr>
+										</table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td>
+													<div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 18px; color: #5a5a5a;"><a href="#" target="_blank" style="text-decoration: underline; font-size: 14px; color: #333333;">Подробнее</a></div>
+												</td>
+											</tr>
+										</table>
+
+
+									</td>
+									<td width="20" class="em-mob-wrap"></td>
+									<td width="280" valign="top" class="em-mob-wrap em-mob-width-100perc">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20" class="em-mob-height-20px"></td></tr></table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td>
+													<img src="https://emcdn.ru/403806/240404_5850_KpaUskL.jpg" width="400" border="0" alt="" style="display: block; width: 100%; max-width: 400px; border-radius: 5px;">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr><tr em="block" class="em-structure">
+						<td align="center" style="padding: 30px 40px; background-size: cover; background-color: #1b1b1c;" class="em-mob-padding_left-20 em-mob-padding_right-20" bgcolor="#1B1B1C" background="https://emcdn.ru/394513/240330_5738_la9ifGM.png">
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="580" valign="top" class="em-mob-wrap em-mob-width-100perc" align="center">
+										
+										
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 20px 0 10px;">
+  <div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 22px; line-height: 35px; color: #f5f5f5;"><strong>ПОСОРЕВНУЙСЯ В СОЗДАНИИ НОВЫХ СЕРВИСОВ ДЛЯ МОБИЛЬНОГО ПРИЛОЖЕНИЯ "ТВОЙ ФФ"</strong></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="80%" em="atom">
+											<tr>
+												<td style="padding-bottom: 20px; padding-top: 20px;" align="center">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 18px; color: #ffffff;">Вы сможете задавать вопросы в реальном времени, обсуждать свои творческие идеи и получать обратную связь от консультантов на площадке</div>
+												</td>
+											</tr>
+										</table><table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-right: 0px; padding-left: 0px;" align="center">
+													<table cellpadding="0" cellspacing="0" border="0" width="130" style="width: 130px;">
+														<tr>
+															<td align="center" valign="middle" height="41" style="border-radius: 100px; height: 41px; border-width: 1px; border-style: solid; border-color: #ffffff;">
+																<a href="https://forms.yandex.ru/cloud/65f69d022530c2032541476f/?clckid=vk_viribus" target="_blank" style="display: block; height: 41px; font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 41px; text-decoration: none; white-space: nowrap; color: #ffffff;">РЕГИСТРАЦИЯ</a>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr><tr em="block" class="em-structure">
+						<td align="center" style="padding-top: 30px; padding-right: 18px; padding-left: 40px; background-repeat: no-repeat; background-color: #1d1d1e;" class="em-mob-padding_left-20 em-mob-padding_right-20" bgcolor="#1D1D1E">
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="188" valign="top" class="em-mob-wrap em-mob-width-100perc" align="center">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td align="center">
+													<img src="https://emcdn.ru/403806/240404_5850_2ZIHJVQ.jpg" width="180" border="0" alt="" style="display: block; width: 100%; max-width: 180px; border-radius: 10px;">
+												</td>
+											</tr>
+										</table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="10"></td></tr></table>
+
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom" class="em-mob-width-60perc">
+											<tr>
+												<td style="padding-bottom: 10px;" align="center" class="em-mob-padding_bottom-20">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 12px; line-height: 14px; color: #d9d9d9;" align="center" class="em-mob-text_align-center">РАЗРАБОТАЙ И ЗАПУСТИ СВОЙ СЕРВИС, КОТОРЫМ БУДУТ ПОЛЬЗОВАТЬСЯ ДЕСЯТКИ СТУДЕНТОВ</div>
+												</td>
+											</tr>
+										</table>
+
+									</td>
+									<td width="20" class="em-mob-wrap"></td>
+									<td width="188" valign="top" class="em-mob-wrap em-mob-width-auto" align="center">
+										
+
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td align="center">
+													<img src="https://emcdn.ru/403806/240404_5850_kqFAdNN.jpg" width="180" border="0" alt="" style="display: block; width: 100%; max-width: 180px; border-radius: 10px;">
+												</td>
+											</tr>
+										</table><table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="10"></td></tr></table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom" class="em-mob-width-60perc">
+											<tr>
+												<td style="padding-bottom: 10px;" class="em-mob-padding_bottom-20">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 12px; line-height: 14px; color: #d9d9d9;" align="center">СТАНЬ ЧАСТЬЮ СТУДЕНЧЕСКОГО IT СООБЩЕСТВА VIRIBUS UNITIS&nbsp;</div>
+												</td>
+											</tr>
+										</table>
+
+									</td>
+									<td width="20" class="em-mob-wrap"></td>
+									<td width="188" valign="top" class="em-mob-wrap em-mob-width-100perc" align="center">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td align="center">
+													<img src="https://emcdn.ru/403806/240404_5850_hiqF7Rq.jpg" width="180" border="0" alt="" style="display: block; width: 100%; max-width: 180px; border-radius: 10px;">
+												</td>
+											</tr>
+										</table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="10"></td></tr></table>
+
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom" class="em-mob-width-60perc">
+											<tr>
+												<td style="padding-bottom: 10px;" class="em-mob-padding_bottom-20">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 12px; line-height: 14px; color: #d9d9d9;" align="center">ПОЛУЧИ БЕСПЛАТНЫЕ СЕРВЕРНЫЕ МОЩНОСТИ ДЛЯ ЗАПУСКА И ХОСТИНГА ТВОЕГО ПРОЕКТА</div>
+												</td>
+											</tr>
+										</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="10"></td></tr></table>
+
+
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr><tr em="block" class="em-structure">
+  <td align="center" style="padding: 30px 40px; background-repeat: no-repeat;" class="em-mob-padding_left-20 em-mob-padding_right-20" background="https://emcdn.ru/394513/240330_5738_FbnbjlR.png">
+    <table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+      <tr>
+        <td width="370" valign="top" class="em-mob-wrap em-mob-width-100perc">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 20px 0 10px;">
+  <div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 22px; line-height: 35px; color: #333333;"><strong>ТВОЙ ФФ&nbsp;— АГРЕГАТОР СЕРВИСОВ ДЛЯ СТУДЕНТОВ ФИЗФАКА МГУ</strong></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding-bottom: 10px;">
+  <div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 17px; line-height: 21px; color: #1b1b1c;">Сейчас Твой ФФ служит студентам для быстрого доступа к расписанию занятий, бесплатному принтеру (для членов Профсоюза), плану этажей с учебными аудиториями, калькулятору выплат и множеству полезных ссылок </div>
+</td></tr></table>
+
+</td>
+      <td width="20" class="em-mob-wrap"></td>
+                                                <td width="190" valign="top" class="em-mob-wrap em-mob-width-100perc">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td>
+  <img src="https://emcdn.ru/403806/240404_5850_qIZNAQh.jpg" width="190" border="0" alt="" style="display: block; width: 100%; max-width: 190px; border-width: 1px; border-style: solid; border-color: #8c8c8c;">
+</td></tr></table>
+</td></tr>
+    </table>
+  </td>
+</tr><tr em="block" class="em-structure">
+  <td align="center" style="padding: 30px 30px 59px 40px; background-repeat: no-repeat; height: 3px; background-color: #1f1f1f;" class="em-mob-padding_left-20 em-mob-padding_right-20" height="3" bgcolor="#1F1F1F" background="https://emcdn.ru/394513/240330_5738_9Bf0DtB.png">
+    <table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+      <tr>
+        <td width="590" valign="top" class="em-mob-wrap em-mob-width-100perc">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 20px 0px 25px;">
+  <div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 22px; line-height: 35px; color: #f5f5f5;"><strong>ПУТЬ</strong> <strong>КОМАНДЫ</strong>&nbsp;</div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding-bottom: 10px;">
+  <div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; line-height: 21px; color: #f5f5f5; font-size: 20px;"><strong style="font-family: Helvetica, Roboto, Arial, sans-serif;">И</strong><span style="font-family: Helvetica, Roboto, Arial, sans-serif;"><strong>ДЕЯ</strong><br><span style="font-size: 17px;">Придумай концепцию для улучшения студенческой жизни<br></span><br><strong>КОД</strong><br><span style="font-size: 17px;">За 2 дня разработай цифровой сервис<br></span><br><strong>РЕЛИЗ</strong><br><span style="font-size: 17px;">Защити свой проект перед жюри</span></span><span style="font-size: 17px;"></span></div>
+</td></tr></table>
+
+</td>
+      </tr>
+    </table>
+  </td>
+</tr><tr em="block" class="em-structure">
+  <td align="center" style="padding: 30px 40px; background-repeat: no-repeat;" class="em-mob-padding_left-20 em-mob-padding_right-20">
+    <table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+      <tr>
+        <td width="580" valign="top" class="em-mob-wrap em-mob-width-100perc">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 20px 0 10px;">
+  <div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 22px; line-height: 35px; color: #333333;"><strong>НЕТ КОМАНДЫ?<br>НАЙДИ ЕДИНОМЫШЛЕННИКОВ В <span style="color: #e239f3;">ЧАТЕ</span></strong></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td style="padding: 10px 0;">
+  <table cellpadding="0" cellspacing="0" border="0" width="160" style="width: 160px;">
+    <tr>
+      <td align="center" valign="middle" height="41" style="border-radius: 31px; height: 41px; border-width: 1px; border-style: solid; border-color: #000000;">
+        <a href="https://m.vk.com/chatjoin?invite_chat_id=8589934596348077444&amp;invite_link=RtttBnlIR8X7OX0ovMUcj2B1llAi8uivx6c=&amp;invite_hash=RtttBnlIR8X7OQ==" target="_blank" style="display: block; height: 41px; font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 41px; text-decoration: none; white-space: nowrap; color: #1f1f1f;">НАЙТИ КОМАНДУ</a>
+      </td>
+    </tr>
+  </table>
+</td></tr></table>
+
+
+
+
+
+</td>
+      </tr>
+    </table>
+  </td>
+</tr><tr em="block" class="em-structure">
+						<td align="center" style="padding: 40px 39px 20px 40px; background-size: cover; background-color: #1b1b1c;" class="em-mob-padding_left-20 em-mob-padding_right-20" bgcolor="#1b1b1c" background="https://emcdn.ru/394513/240330_5738_pdEUOGb.png">
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="581" valign="top" class="em-mob-wrap em-mob-width-100perc">
+										<table cellpadding="0" cellspacing="0" border="0" width="50%" em="atom" class="em-mob-width-80perc">
+											<tr>
+												<td style="padding-right: 0px; padding-bottom: 10px; padding-left: 0px; font-size: 20px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 25px; line-height: 24px; color: #f5f5f5;"><strong>Анкета <span style="color: #e239f3;">закроется</span> 5 апреля в 23:59</strong></div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="15"></td></tr></table><table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="281" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table>
+									</td>
+									<td width="20" class="em-mob-wrap em-mob-wrap-cancel"></td>
+									<td width="281" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table>
+</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="90" class="em-mob-height-10px"></td></tr></table><table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="281" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table>
+									</td>
+									<td width="20" class="em-mob-wrap em-mob-wrap-cancel"></td>
+									<td width="281" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom" class="null">
+											<tr>
+												<td style="padding-bottom: 10px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 20px; line-height: 25px; color: #ffffff;" class="em-mob-text_align-right"><a href="https://forms.yandex.ru/cloud/65f69d022530c2032541476f/?clckid=vk_viribus" target="_blank" style="text-decoration: none; color: #ffffff; font-size: 17px;"><strong>ЗАРЕГИСТРИРОВАТЬСЯ СЕЙЧАС</strong>&nbsp;</a></div>
+												</td>
+											</tr>
+										</table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td class="em-mob-text_align-right">
+													<a href="https://forms.yandex.ru/cloud/65f69d022530c2032541476f/?clckid=vk_viribus" target="_blank"><img src="https://emcdn.ru/403806/240404_5850_QkiIO4J.png" width="40" border="0" alt="" style="display: inline-block; width: 100%; max-width: 40px;"></a>
+												</td>
+											</tr>
+										</table>
+
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr><tr em="block" class="em-structure">
+						<td align="center" style="padding: 30px 40px; background-color: #1b1b1c; background-repeat: repeat;" class="em-mob-padding_left-20 em-mob-padding_right-20" bgcolor="#1B1B1C">
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="363" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="60%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 21px; color: #ffffff;">Присоединяйтесь и воплощайте свои идеи вместе с нами!</div>
+												</td>
+											</tr>
+										</table>
+										<table cellpadding="0" cellspacing="0" border="0" width="110%" em="atom">
+											<tr>
+												<td style="padding-right: 0px; padding-bottom: 10px; padding-left: 0px;">
+													<table cellpadding="0" cellspacing="0" border="0" width="135" style="width: 135px;">
+														<tr>
+															<td align="center" valign="middle" height="41" style="background-color: #ffffff; border-radius: 100px; height: 41px;" bgcolor="#fff">
+																<a href="https://forms.yandex.ru/cloud/65f69d022530c2032541476f/?clckid=vk_viribus" style="display: block; height: 41px; font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 41px; text-decoration: none; white-space: nowrap; color: #000000;" target="_blank">РЕГИСТРАЦИЯ</a>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+
+									</td>
+									<td width="0" class="em-mob-wrap em-mob-wrap-cancel"></td>
+									<td width="217" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td align="left">
+													<table border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td width="40" align="center">
+																<a href="https://t.me/ViribusUnitisGroup" target="_blank"><img src="https://emcdn.ru/403806/240404_5850_F3LzTbJ.png" width="25" border="0" alt="" style="display: block; width: 100%; max-width: 25px;"></a>
+															</td>
+															<td width="40" align="center">
+																<a href="https://vk.com/viribusunitismsu" target="_blank"><img src="https://emcdn.ru/403806/240404_5850_ZXZveVn.png" width="25" border="0" alt="" style="display: block; max-width: 25px; width: 100%;"></a>
+															</td>
+															<td width="40" align="center">
+																<a href="https://app.profcomff.com/" target="_blank"><img src="https://emcdn.ru/403806/240404_5850_UY7gLUI.png" width="25" border="0" alt="" style="display: block; width: 100%; max-width: 25px;"></a>
+															</td>
+															<td width="40" align="center">
+																<a href="https://github.com/profcomff" target="_blank"><img src="https://emcdn.ru/403806/240404_5850_Z3b5EpQ.png" width="25" border="0" alt="" style="display: block; width: 100%; max-width: 25px;"></a>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px; padding-left: 10px;">
+													<a href="" target="_blank" style="color: #1C52DC; text-decoration:  underline;" new="true"><div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 18px; color: #f8f8f8;">О хакатоне</div></a>
+												</td>
+											</tr>
+										</table><table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px; padding-left: 10px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 18px; color: #f8f8f8;"><a href="#" target="_blank" style="text-decoration: none; color: #f8f8f8;">Программа</a></div>
+												</td>
+											</tr>
+										</table><table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px; padding-left: 10px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 18px; color: #f8f8f8;"><a href="https://m.vk.com/chatjoin?invite_chat_id=8589934596348077444&amp;invite_link=RtttBnlIR8X7OX0ovMUcj2B1llAi8uivx6c=&amp;invite_hash=RtttBnlIR8X7OQ==" target="_blank" style="text-decoration: none; color: #f8f8f8;">Чат поиска команд</a>ы</div>
+												</td>
+											</tr>
+										</table><table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px; padding-left: 10px;">
+													<div style="font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 18px; color: #f8f8f8;"><a href="#" target="_blank" style="text-decoration: none; color: #f8f8f8;">Контакты</a></div>
+												</td>
+											</tr>
+										</table>
+
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="50"></td></tr></table>
+							<table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="580" valign="top" class="em-mob-wrap em-mob-width-100perc">
+
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td>
+													<img src="https://emcdn.ru/403806/240404_5850_T2vhcHz.png" width="580" border="0" alt="" style="display: block; width: 100%; max-width: 580px;">
+												</td>
+											</tr>
+										</table>
+
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom"><tr><td height="20"></td></tr></table><table border="0" cellspacing="0" cellpadding="0" class="em-mob-width-100perc">
+								<tr>
+									<td width="180" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td>
+													<img src="https://emcdn.ru/403806/240404_5850_1IAYRDp.png" width="50" border="0" alt="" style="display: block; width: 100%; max-width: 50px;">
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td width="20" class="em-mob-wrap em-mob-wrap-cancel"></td>
+									<td width="180" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px;">
+													<div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 16px; line-height: 16px; color: #5a5a5a;" align="right"><a href="#" target="_blank" style="text-decoration: underline; color: #f8f8f8; font-family: Helvetica, Roboto, Arial, sans-serif; font-size: 14px;">Отписаться</a>&nbsp;</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td width="20" class="em-mob-wrap em-mob-wrap-cancel"></td>
+									<td width="180" valign="top" class="em-mob-wrap em-mob-wrap-cancel em-mob-width-auto">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" em="atom">
+											<tr>
+												<td style="padding-bottom: 10px;">
+													<div style="font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 16px; color: #f8f8f8;" align="right"><a href="#" target="_blank" style="text-decoration: underline; color: #f8f8f8;">Перейти в веб-версию</a></div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr></table>
+				<!--[if (gte mso 9)|(IE)]>
+				</td></tr></table>
+				<![endif]-->
+			</td>
+		</tr>
+	</table>
+
+</body></html>
